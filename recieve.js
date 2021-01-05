@@ -25,7 +25,7 @@ $(document).ready(function(event){
     request.done(function (response, textStatus, jqXHR){
         // Log a message to the console
         console.log(response);
-
+        $('#result').html(response)
     });
 
     // Callback handler that will be called on failure
@@ -44,5 +44,4 @@ $(document).ready(function(event){
     });
 
     // Prevent default posting of form
-    event.preventDefault();
 });
