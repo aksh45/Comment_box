@@ -9,30 +9,26 @@ $("#form").submit(function(event){
         request.abort();
     }
     // setup some local variables
-    var $form = $(this);
 
     // Let's select and cache all the fields
-    var $inputs = $form.find("input, select, button, textarea");
 
     // Serialize the data in the form
-    var serializedData = $form.serialize();
 
     // Let's disable the inputs for the duration of the Ajax request.
     // Note: we disable elements AFTER the form data has been serialized.
-    // Disabled form elements will not be serialized.
-    $inputs.prop("disabled", true);
+    // Disabled form elements will not be
 
     // Fire off the request to /form.php
     request = $.ajax({
-        url: "https://spreadsheets.google.com/feeds/worksheets/1CO7P-DLNtjBg05yvu8QXzlkdjV2C7bk_re_x8IdsMog/private/full",
+        url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTya7D8A3xcQMf1GHGY1Gy3rRuKQM2TaDsRwz3RUmNaZI2Zcb7kiJx1SjK0jcTv8Un86AOTmSlaX5a7/pub?gid=0&single=true&output=csv",
         type: "get",
     });
 
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR){
         // Log a message to the console
-        console.log("Hooray, it worked!");
-        console.log(response);
+        music = $.csv.toArrays(response);
+        console.log(music);
         console.log(textStatus);
         console.log(jqXHR);
     });

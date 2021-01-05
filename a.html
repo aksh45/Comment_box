@@ -10,20 +10,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src='send.js'></script>
         <script src="recieve.js"></script>
-        <script id='script'>
-      localStorage.clear();
-      var url = "https://spreadsheets.google.com/pub?key=1CO7P-DLNtjBg05yvu8QXzlkdjV2C7bk_re_x8IdsMog=en&output=html";
-      var url_parameter = document.location.search.split(/\?url=/)[1]
-      var googleSpreadsheet = new GoogleSpreadsheet();
-      googleSpreadsheet.url(url);
-      googleSpreadsheet.load(function(result) {
-        $('#results').html(JSON.stringify(result).replace(/,/g,",\n"));
-      });
-    </script>
-    <script>
-      $('#code').html($('#script').html())
-      $('#spreadsheet_url').html("<a href='"+url+"'>"+url+"</a>");
-    </script>
     </body>
 </html>
 
