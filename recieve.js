@@ -2,12 +2,9 @@
 var request;
 
 // Bind to the submit event of our form
-$("#form").submit(function(event){
+$(document).ready(function(event){
 
     // Abort any pending request
-    if (request) {
-        request.abort();
-    }
     // setup some local variables
 
     // Let's select and cache all the fields
@@ -44,7 +41,6 @@ $("#form").submit(function(event){
     // if the request failed or succeeded
     request.always(function () {
         // Reenable the inputs
-        $inputs.prop("disabled", false);
     });
 
     // Prevent default posting of form
