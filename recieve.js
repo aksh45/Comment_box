@@ -28,15 +28,14 @@ $("#form").submit(function(event){
     request.done(function (response, textStatus, jqXHR){
         // Log a message to the console
         console.log(response);
-        console.log(textStatus);
-        console.log(jqXHR);
+
     });
 
     // Callback handler that will be called on failure
     request.fail(function (jqXHR, textStatus, errorThrown){
         // Log the error to the console
         console.error(
-            "The following error occurred: "+
+            "The following error is given: "+
             textStatus, errorThrown
         );
     });
