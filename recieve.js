@@ -27,8 +27,7 @@ $("#form").submit(function(event){
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR){
         // Log a message to the console
-        music = $.csv.toArrays(response);
-        console.log(music);
+        console.log(response);
         console.log(textStatus);
         console.log(jqXHR);
     });
