@@ -2,6 +2,7 @@
 var request;
 
 // Bind to the submit event of our form
+$.ajaxSetup({ cache: false });
 $("#form").submit(function(event){
 
     // Abort any pending request
