@@ -16,8 +16,9 @@ $(document).ready(function(event){
     // Disabled form elements will not be
 
     // Fire off the request to /form.php
+    $.ajaxSetup({ cache: false });
     request = $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbww-N-8f8OgAKDeQSKCorRQoP_dkeFx0U0q3--vMw/dev",
+        url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTya7D8A3xcQMf1GHGY1Gy3rRuKQM2TaDsRwz3RUmNaZI2Zcb7kiJx1SjK0jcTv8Un86AOTmSlaX5a7/pub?gid=0&single=true&output=csv",
         type: "get",
     });
 
