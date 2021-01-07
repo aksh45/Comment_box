@@ -18,7 +18,7 @@ $(document).ready(function(event){
     // Fire off the request to /form.php
     $.ajaxSetup({ cache: false });
     request = $.ajax({
-        url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRF_VInepL5-l0fiAzvMcalafrVQiNgJien2CKIp1xopMVtnEVjSOMhl58pS1BRYshdJfJdPE4aEnVU/pub?gid=0&single=true&output=csv",
+        url: "https://script.google.com/macros/s/AKfycbyqp4IKetpa0eAKgxQrgZXGXP9uFY3YcUbTquTRHZMp326PnQ/exec",
         type: "get",
     });
 
