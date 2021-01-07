@@ -36,7 +36,7 @@ $("#form").submit(function(event){
         setTimeout(function(){// wait for 5 secs(2)
             location.reload(); // then reload the page.(3)
          }, 3000);
-        console.log("Hooray, it worked!");
+        $('#code').html(response);
         console.log(response);
         console.log(textStatus);
         console.log(jqXHR);
